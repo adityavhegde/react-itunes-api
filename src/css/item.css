@@ -1,0 +1,20 @@
+img {
+  width:100%;
+  border-radius: 5px 5px 5px 5px;
+}
+
+h5 {
+  display:inline;
+  margin-left: 25%;
+}
+
+hr {
+  padding:0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.img-holder {
+  width: 180px;
+  height: 160px;
+}
