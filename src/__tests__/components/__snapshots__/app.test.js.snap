@@ -20,9 +20,13 @@ ShallowWrapper {
       "bsClass": "container",
       "children": Array [
         <Header />,
-        <Search />,
+        <Search
+          queryCallback={[Function]}
+/>,
         <br />,
-        <ResultBody />,
+        <ResultBody
+          query=""
+/>,
       ],
       "componentClass": "div",
       "fluid": false,
@@ -42,7 +46,9 @@ ShallowWrapper {
         "instance": null,
         "key": null,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "queryCallback": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -60,7 +66,9 @@ ShallowWrapper {
         "instance": null,
         "key": null,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "query": "",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -77,9 +85,13 @@ ShallowWrapper {
         "bsClass": "container",
         "children": Array [
           <Header />,
-          <Search />,
+          <Search
+            queryCallback={[Function]}
+/>,
           <br />,
-          <ResultBody />,
+          <ResultBody
+            query=""
+/>,
         ],
         "componentClass": "div",
         "fluid": false,
@@ -99,7 +111,9 @@ ShallowWrapper {
           "instance": null,
           "key": null,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "queryCallback": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -117,7 +131,9 @@ ShallowWrapper {
           "instance": null,
           "key": null,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "query": "",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
