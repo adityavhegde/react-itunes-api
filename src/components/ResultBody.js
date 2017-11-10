@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Item from './Item';
-import emitter from '../Emitter';
 import {Grid, Alert} from 'react-bootstrap';
 import './../css/resultBody.css';
 
@@ -12,8 +11,10 @@ class ResultBody extends Component {
     query: ''
   }
 
-  componentDidMount() {
-    emitter.on('search', this.fetchSearchResults.bind(this));
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.query !== this.state.query) {
+      this.fetchSearchResults(nextProps.query);
+    }
   }
 
   async fetchSearchResults(state) {
@@ -43,10 +44,6 @@ class ResultBody extends Component {
     const toReturn =
       results.length > 0 ? <Grid>{results.map((entry, index) => <Item key={index} {...entry}/>)}</Grid> : alertInstance;
     return toReturn;
-  }
-
-  componentWillUnmount() {
-    this.emitter.removeListener('search');
   }
 
   render() {

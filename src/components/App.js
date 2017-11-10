@@ -6,13 +6,23 @@ import {Grid} from 'react-bootstrap';
 
 class App extends Component {
 
+  state = {
+    searchText:''
+  }
+
+  updateSearchText(query) {
+    this.setState({
+      searchText:query
+    });
+  }
+
   render() {
     return (
       <Grid>
         <Header/>
-        <Search/>
+        <Search queryCallback={this.updateSearchText.bind(this)}/>
         <br/>
-        <ResultBody/>
+        <ResultBody query={this.state.searchText}/>
       </Grid>
     )
   }
